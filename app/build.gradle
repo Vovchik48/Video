@@ -2,12 +2,12 @@ apply plugin: 'com.android.application'
 
 android {
     namespace 'com.downloader.video'
-    compileSdk 34
+    compileSdk 33  // Временно понижаем до 33 для совместимости
     
     defaultConfig {
         applicationId "com.downloader.video"
         minSdk 21
-        targetSdk 34
+        targetSdk 33
         versionCode 1
         versionName "1.0"
     }
@@ -16,6 +16,11 @@ android {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
     }
+}
+
+repositories {
+    google()
+    mavenCentral()
 }
 
 dependencies {
